@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Men - Velvet Vogue</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Gothic;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(17, 17, 17, 0.6);
+      color: #fff;
+      padding: 2.7rem 2rem;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    nav a {
+      color: #fff;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+
+    .category-hero {
+      background: url('images/MD.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+padding: 8rem 1rem 4rem;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #new-arrivals {
+      padding: 3rem 1rem;
+    }
+
+     .scroll-container {
+      display: flex;
+      gap: 1.8rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .scroll-container .card {
+      min-width: 340px;
+      max-width: 1000px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+
+    .scroll-container .card-img-top {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .btn i {
+      margin-right: 9px;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="d-flex justify-content-between align-items-center">
+    <h2>Velvet Vogue</h2>
+    <nav>
+      <a href="new velvet vogue .html">Home</a>
+	  <a href="women.html">Women</a>
+      <a href="men.html">Men</a>
+      <a href="kidss.html">Kids</a>
+      <a href="Cart page .html">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="category-hero">
+      <h1>Womens  Collection</h1>
+      <p>Discover premium outfits tailored for distinction</p>
+    </section>
+
+    <section class="container" id="new-arrivals">
+      <h3 class="mb-4">Frocks</h3>
+      <div class="scroll-container">
+	  
+        <!-- Product 1 -->
+       <div class="card">
+          <img src="images/Denimm.jpg" class="card-img-top" alt="Denim Jacket">
+          <div class="card-body text-center">
+            <h5 class="card-title">Denim dress</h5>
+            <p class="product-price">Rs.3,500.00</p>
+            <p class="card-text">Stylish and rugged. Premium quality denim.</p>
+			 <div class="mb-2">
+              <label for="color-denim" class="form-label">Color</label>
+              <select id="color-denim" class="form-select">
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Light Blue">Light Blue</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="size-denim" class="form-label">Size</label>
+              <select id="size-denim" class="form-select">
+                <option value="S">Small (S)</option>
+                <option value="M">Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+              </select>
+            </div>
+            <button class="btn btn-dark w-100" onclick="addToCart('Denim dress', 'Rs.3,500.00', 'images/denimm.jpg', document.getElementById('color-denim').value, document.getElementById('size-denim').value)">
+              <i class="bi bi-cart-fill"></i> Shop Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card">
+          <img src="images/EE.jpg" class="card-img-top" alt="pink dress">
+          <div class="card-body text-center">
+            <h5 class="card-title">pink dress</h5>
+            <p class="product-price">Rs.9,500.00</p>
+            <p class="card-text">Comfortable and breathable.</p>
+			 <div class="mb-2">
+              <label for="color-denim" class="form-label">Color</label>
+              <select id="color-denim" class="form-select">
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Light Blue">Light Blue</option>
+              </select>
+            </div>
+             <div class="mb-3">
+              <label for="size-dress" class="form-label">Size</label>
+              <select id="size-dress" class="form-select">
+                <option value="S">Small (S)</option>
+                <option value="M">Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+              </select>
+            </div>
+            <button class="btn btn-dark w-100" onclick="addToCart('pink dress ', 'Rs.9,500.00', 'images/EE.jpg', document.getElementById('color-dress').value, document.getElementById('size-dress').value)">
+              <i class="bi bi-cart-fill"></i> Shop Now
+            </button>
+          </div>
+        </div>
+			
+		
+		<div class="card">
+          <img src="images/women1.jpg" class="card-img-top" alt="Floral dress">
+          <div class="card-body text-center">
+            <h5 class="card-title">Floral dress </h5>
+            <p class="product-price">Rs.4,500.00</p>
+            <p class="card-text">comfortable and  Elegent  .</p>
+		<div class="mb-2">
+              <label for="color-dress" class="form-label">Color</label>
+              <select id="color-dress" class="form-select">
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Light Blue">Light Blue</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="size-dress" class="form-label">Size</label>
+              <select id="size-dress" class="form-select">
+                <option value="S">Small (S)</option>
+                <option value="M">Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+              </select>
+            </div>
+            <button class="btn btn-dark w-100" onclick="addToCart('Floral dress ', 'Rs.4,500.00', 'images/women1.jpg', document.getElementById('color-dress').value, document.getElementById('size-dress').value)">
+              <i class="bi bi-cart-fill"></i> Shop Now
+            </button>
+          </div>
+        </div>
+
+  
+          
+
+        <!-- Product 3 -->
+        <div class="card">
+          <img src="images/high.jpg" class="card-img-top" alt="Formal Dress">
+          <div class="card-body text-center">
+            <h5 class="card-title">Formal Dress</h5>
+            <p class="product-price">Rs.20,000.00</p>
+            <p class="card-text">Tailored for elegance and comfort.</p>
+         	<div class="mb-2">
+              <label for="color-Dress" class="form-label">Color</label>
+              <select id="color-Dress" class="form-select">
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Light Blue">Light Blue</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="size-Dress" class="form-label">Size</label>
+              <select id="size-Dress" class="form-select">
+                <option value="S">Small (S)</option>
+                <option value="M">Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+              </select>
+            </div>
+            <button class="btn btn-dark w-100" onclick="addToCart('Dress ', 'Rs.20,000.00', 'images/high.jpg', document.getElementById('color-Dress').value, document.getElementById('size-Dress').value)">
+              <i class="bi bi-cart-fill"></i> Shop Now
+            </button>
+          </div>
+        </div>
+
+  
+    </section>
+  </main>
+  
+  
+    <section class="container" id="new-arrivals">
+      <h3 class="mb-4">Pants</h3>
+      <div class="scroll-container">
+        <!-- Product 1 -->
+        <div class="card">
+          <img src="images/der.jpg" class="card-img-top" alt="Formal pants">
+          <div class="card-body text-center">
+            <h5 class="card-title">Formal pants </h5>
+            <p class="product-price">Rs.4,000.00</p>
+            <p class="card-text">Stylish and rugged. Premium quality  pants.</p>
+            <div class="mb-2">
+              <label for="color-formal" class="form-label">Color</label>
+              <select id="color-formal" class="form-select">
+                <option value="Khaki">Khaki</option>
+                <option value="Grey">Grey</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="size-formal" class="form-label">Size</label>
+              <select id="size-formal" class="form-select">
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+              </select>
+            </div>
+
+             <button class="btn btn-dark w-100" onclick="addToCart('Formal pants', 'Rs.4,000.00', 'images/der.jpg', document.getElementById('color-formal').value, document.getElementById('size-formal').value)">
+              <i class="bi bi-cart-fill"></i> Shop Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card">
+          <img src="images/CDC.jpg" class="card-img-top" alt="Cargo pants">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cargo pants</h5>
+            <p class="product-price">Rs.3,500.00</p>
+            <p class="card-text">Comfortable and flexible.</p>
+			<div class="mb-2">
+              <label for="color-cargo" class="form-label">Color</label>
+              <select id="color-cargo" class="form-select">
+                <option value="Khaki">Green</option>
+                <option value="Grey">Grey</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="size-cargo" class="form-label">Size</label>
+              <select id="size-cargo" class="form-select">
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+              </select>
+            </div>
+            <button class="btn btn-dark w-100" onclick="addToCart('Cargo pants', 'Rs.3,500.00', 'images/CDC.jpg', document.getElementById('color-cargo').value, document.getElementById('size-cargo').value)">
+              <i class="bi bi-cart-fill"></i> Shop Now
+            </button> 
+          </div>
+        </div>
+          
+		
+		<div class="card">
+          <img src="images/denimmm.jpg" class="card-img-top" alt="Denim pants">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Denim  pants  </h5>
+            <p class="product-price">Rs.5,500.00</p>
+            <p class="card-text">comfortable and sporty and flexible Denims.</p>
+           <div class="mb-2">
+              <label for="color-dpants" class="form-label">Color</label>
+              <select id="color-dpants" class="form-select">
+                <option value="Khaki">Blue</option>
+                <option value="Grey">Grey</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="size-dpants" class="form-label">Size</label>
+              <select id="size-dpants" class="form-select">
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+              </select>
+            </div>
+       <button class="btn btn-dark w-100" onclick="addToCart('Denim  pants', 'Rs.5,500.00', 'images/denimmm.jpg', document.getElementById('color-dpants').value, document.getElementById('size-dpants').value)">
+              <i class="bi bi-cart-fill"></i> Shop Now
+            </button>     
+        </button>      
+          </div>
+        </div>
+          
+              
+
+        <!-- Product 3 -->
+        <div class="card">
+          <img src="images/work.jpg" class="card-img-top" alt="Slim Fit formal pant">
+          <div class="card-body text-center">
+            <h5 class="card-title">Slim Fit formal pant</h5>
+            <p class="product-price">Rs.5,000.00</p>
+            <p class="card-text">Tailored for elegance and comfort.</p>
+           <div class="mb-2">
+              <label for="color-slim" class="form-label">Color</label>
+              <select id="color-slim" class="form-select">
+                <option value="Khaki">White</option>
+                <option value="Grey">Grey</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="size-slim" class="form-label">Size</label>
+              <select id="size-slim" class="form-select">
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="32">32</option>
+                <option value="34">34</option>
+              </select>
+			  </div>
+             <button class="btn btn-dark w-100" onclick="addToCart('Slim Fit formal pant', 'Rs.5,000.00', 'images/work.jpg', document.getElementById('color-slim').value, document.getElementById('size-slim').value)">
+              <i class="bi bi-cart-fill"></i> Shop Now
+            </button> 
+             
+          </div>
+        </div>
+          
+    </section>
+  </main>
+
+
+  <footer>&copy; 2025 Velvet Vogue. All rights reserved.</footer>
+  
+
+<script>
+    function addToCart(title, price, image, color, size) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({title, price, image, color, size });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${title} (${color}, ${size}) added to cart!`);
+    }
+  </script>
+  
+  
+  
+</body>
+</html>

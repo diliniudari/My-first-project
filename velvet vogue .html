@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet Vogue | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Gothic;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(17, 17, 17, 0.7);
+      color: #fff;
+      padding: 2.7rem 2rem;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+    .background-section {
+      background: url('images/JJJ.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      padding: 8rem 1rem 4rem;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .btn-dark {
+      background-color: #000;
+      border: none;
+    }
+    .card-title {
+      font-weight: bold;
+    }
+    .scroll-container {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .scroll-container .card {
+      min-width: 300px;
+      max-width: 400px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+    .scroll-container .card-img-top {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .discount-banner {
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      color: white;
+      padding: 0.3rem 0.3rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .why-us {
+      background: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .why-us h3 {
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .why-us .row div {
+      margin-bottom: 1.5rem;
+    }
+    .why-us i {
+      font-size: 2rem;
+      color: #ee0979;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="d-flex justify-content-between align-items-center">
+    <h2>Velvet Vogue</h2>
+    <nav>
+      <a href="new velvet vogue.html">Home</a>
+      <a href="Women.html">Women</a>
+      <a href="men.html">Men</a>
+      <a href="kidss.html">Kids</a>
+      <a href="Carty .html">Cart</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="background-section" id="home">
+    <h1 class="mb-4">Our Latest Arrivals Are Here</h1>
+    <p class="mb-4">Step into style. Discover trendsetting outfits curated just for you.</p>
+    <a href="#new-arrivals" class="btn btn-light btn-lg">Shop Now</a>
+  </section>
+
+  <section class="discount-banner">
+    🔥 Seasonal Sale: Get Up to 50% OFF on Selected Items – Limited Time Only!
+  </section>
+
+  <section class="container my-5" id="new-arrivals">
+    <h2 class="text-center mb-4">Latest Arrivals</h2>
+    <div class="scroll-container">
+      <div class="card h-100">
+        <img src="images/css.jpg" class="card-img-top" alt="Denim Jacket">
+        <div class="card-body">
+          <h5 class="card-title">Classic Denim Jacket</h5>
+          <p class="product-price">Rs.3,500.00</p>
+          <p class="card-text">Stylish and rugged. Made with premium quality denim.</p>
+           <button class="btn btn-dark w-100" onclick="addToCart('Classic Denim Jacket', 'Rs.3500.00', 'images/css.jpg')"><i class="bi bi-cart-fill"></i>Shop Now</button>
+          
+          </button>
+        </div>
+      </div>
+
+      <div class="card h-100">
+        <img src="images/cama.jpg" class="card-img-top" alt="Floral Dress">
+        <div class="card-body">
+          <h5 class="card-title">Summer Cama Dress</h5>
+          <p class="product-price">Rs.5,500.00</p>
+          <p class="card-text">Flowy and vibrant. Perfect for sunny days and getaways.</p>
+           <button class="btn btn-dark w-100" onclick="addToCart('Summer Cama Dress', 'Rs.5,500.00', 'images/cama.jpg')"><i class="bi bi-cart-fill"></i>Shop Now</button>
+         
+         
+          </button>
+        </div>
+      </div>
+
+      <div class="card h-100">
+        <img src="images/UUU.jpg" class="card-img-top" alt="Mens Sneakers">
+        <div class="card-body">
+          <h5 class="card-title">Urban Edge Sneakers</h5>
+          <p class="product-price">Rs.8,500.00</p>
+          <p class="card-text">Street-style comfort shoes with maximum impact.</p>
+           <button class="btn btn-dark w-100" onclick="addToCart('Mens Sneakers', 'Rs.8,500.00', 'images/UUU.jpg')"><i class="bi bi-cart-fill"></i>Shop Now</button>
+            <i class="bi bi-cart-fill me-2"></i>Shop Now
+          </button>
+        </div>
+      </div>
+
+      <div class="card h-100">
+        <img src="images/EROR.jpg" class="card-img-top" alt="Women Business Wear">
+        <div class="card-body">
+          <h5 class="card-title">Women Business Wear</h5>
+          <p class="product-price">Rs.4,500.00</p>
+          <p class="card-text">Elegant, smart wear for today’s professionals.</p>
+           <button class="btn btn-dark w-100" onclick="addToCart('Women Business Wear', 'Rs.4,500.00', 'images/EROR.jpg')"><i class="bi bi-cart-fill"></i>Shop Now</button>
+            <i class="bi bi-cart-fill me-2"></i>Shop Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <div class="container">
+      <h3>Why Shop With Velvet Vogue?</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="bi bi-truck"></i>
+          <h5>Fast Delivery</h5>
+          <p>Quick and reliable shipping all across Sri Lanka.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-shield-check"></i>
+          <h5>Secure Payments</h5>
+          <p>100% safe and secure payment methods.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-stars"></i>
+          <h5>Trendy Collections</h5>
+          <p>Stay ahead with our fresh and fashionable designs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Velvet Vogue. All rights reserved.
+  </footer>
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      header.style.background = window.scrollY > 50 ? "#111" : "rgba(17, 17, 17, 0.7)";
+    });
+
+    function addToCart(title, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ title, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${title} added to cart!`);
+    }
+  </script>
+</body>
+</html>
